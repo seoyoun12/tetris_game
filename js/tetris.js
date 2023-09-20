@@ -178,15 +178,13 @@ document.addEventListener("keydown", (e) => {
 
 restartButton.addEventListener("click", () => {
   playground.innerHTML = "";
+  scoreDisplay.innerHTML = "0";
   init();
   gameText.style.display = "none";
   score = 0;
 });
 
 startButton.addEventListener("click", () => {
-  playground.innerHTML = "";
   init();
-  gameText.style.display = "none";
   gameStart.style.display = "none";
-  score = 0;
 });
