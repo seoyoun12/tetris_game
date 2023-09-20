@@ -1,10 +1,12 @@
 import BLOCKS from "./blocks.js";
 
 const playground = document.querySelector(".playground ul");
+const gameStart = document.querySelector(".game_start");
 const gameText = document.querySelector(".game_text");
 const endscore = document.querySelector(".endscore");
 const scoreDisplay = document.querySelector(".score");
 const restartButton = document.querySelector(".game_text button");
+const startButton = document.querySelector(".game_start button");
 
 const GameRows = 20;
 const GameCols = 10;
@@ -20,8 +22,6 @@ const movingItem = {
   top: 0,
   left: 3,
 };
-
-init();
 
 function init() {
   tempMovingItem = { ...movingItem };
@@ -183,4 +183,10 @@ restartButton.addEventListener("click", () => {
   score = 0;
 });
 
-console.log(endscore);
+startButton.addEventListener("click", () => {
+  playground.innerHTML = "";
+  init();
+  gameText.style.display = "none";
+  gameStart.style.display = "none";
+  score = 0;
+});
