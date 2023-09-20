@@ -17,26 +17,29 @@ ul{
 body{
   height: 100%;
   overflow: hidden;
+  background:#dff;
 }
 
 .game_start{
   display:flex;
   position: fixed;
   width:100%; height: 100%;
-  background:#fff;
+  background:#dff;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 .game_start span{
+  color:#555;
   font-size:50px;
   margin-bottom:20px;
 }
 
 button{
   width:100px; height: 50px;
-  background: #ff8082;
+  background: #5cf;
   border-radius: 15px;
+  line-height:50px;
 }
 
 .game_text{
